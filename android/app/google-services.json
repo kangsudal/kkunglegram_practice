@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536261960553",
+    "project_id": "practice-kkunglegram",
+    "storage_bucket": "practice-kkunglegram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536261960553:android:2b9785f628d0b145f893f8",
+        "android_client_info": {
+          "package_name": "com.kangsudal.kkunglegram_practice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536261960553-ndhp0cmjp608s5gl1d513hifq4e1c1pf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkdkVpkPBWEiZ6n-zCF-LSXLPuh-kHVXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536261960553-ndhp0cmjp608s5gl1d513hifq4e1c1pf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
