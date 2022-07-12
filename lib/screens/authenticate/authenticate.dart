@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:kkunglegram_practice/config/palette.dart';
+import 'package:kkunglegram_practice/provider/isSignupProvider.dart';
 
 class LoginSignupScreen extends StatelessWidget {
   const LoginSignupScreen({Key? key}) : super(key: key);
@@ -136,14 +138,21 @@ class MyForm extends StatelessWidget {
   }
 }
 
-class LoginTab extends StatelessWidget {
+class LoginTab extends ConsumerWidget {
   const LoginTab({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    bool isSignupScreen = ref.watch(isSignupScreenProvider);
     return GestureDetector(
+      onTap: () {
+        ref.read(isSignupScreenProvider.notifier).update(false);
+        if (isSignupScreen == false) {
+          debugPrint("Now it is false");
+        }
+      },
       child: Column(
         children: [
           Text(
@@ -151,7 +160,7 @@ class LoginTab extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Palette.textColor1,
+              color: !isSignupScreen ? Palette.activeColor : Palette.textColor1,
             ),
           ),
           Container(
@@ -165,16 +174,20 @@ class LoginTab extends StatelessWidget {
   }
 }
 
-class SignupTab extends StatelessWidget {
+class SignupTab extends ConsumerWidget {
   const SignupTab({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    bool isSignupScreen = ref.watch(isSignupScreenProvider);
     return GestureDetector(
-      onTap: (){
-        // isSignupScreen = true;
+      onTap: () {
+        ref.read(isSignupScreenProvider.notifier).update(true);
+        if (isSignupScreen) {
+          debugPrint("Now it is true");
+        }
       },
       child: Column(
         children: [
@@ -183,7 +196,7 @@ class SignupTab extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Palette.activeColor,
+              color: isSignupScreen ? Palette.activeColor : Palette.textColor1,
             ),
           ),
           Container(
