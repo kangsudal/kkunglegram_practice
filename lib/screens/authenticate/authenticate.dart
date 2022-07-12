@@ -132,7 +132,39 @@ class MyForm extends StatelessWidget {
             LoginTab(),
             SignupTab(),
           ],
-        )
+        ),
+        Container(
+          child: Form(
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                    prefixIcon: Icon(
+                      Icons.account_circle,
+                      color: Palette.iconColor,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Palette.textColor1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Palette.textColor1,
+                      ),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
