@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kkunglegram_practice/screens/wrapper.dart';
+import 'package:kkunglegram_practice/screens/authenticate/authenticate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Wrapper(),
+      home: const LoginSignupScreen(),
     );
   }
 }
