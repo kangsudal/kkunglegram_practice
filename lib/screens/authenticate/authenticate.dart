@@ -163,11 +163,12 @@ class LoginTab extends ConsumerWidget {
               color: !isSignupScreen ? Palette.activeColor : Palette.textColor1,
             ),
           ),
-          Container(
-            height: 2,
-            width: 55,
-            color: Colors.blueAccent,
-          ),
+          if (!isSignupScreen)
+            Container(
+              height: 2,
+              width: 55,
+              color: Colors.blueAccent,
+            ),
         ],
       ),
     );
@@ -199,11 +200,12 @@ class SignupTab extends ConsumerWidget {
               color: isSignupScreen ? Palette.activeColor : Palette.textColor1,
             ),
           ),
-          Container(
-            height: 2,
-            width: 55,
-            color: Colors.blueAccent,
-          ),
+          if (isSignupScreen)
+            Container(
+              height: 2,
+              width: 55,
+              color: Colors.blueAccent,
+            ),
         ],
       ),
     );
