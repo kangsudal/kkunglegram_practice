@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kkunglegram_practice/screens/authenticate/sign_in.dart';
 
 class Authenticate extends StatelessWidget {
   const Authenticate({Key? key}) : super(key: key);
@@ -6,7 +7,7 @@ class Authenticate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('authenticate'),
+      child: SignIn(),
     );
   }
 }
