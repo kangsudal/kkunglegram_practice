@@ -31,7 +31,7 @@ class _SignInState extends State<SignIn> {
               debugPrint('error signing in');
             }else{
               debugPrint('signed in');
-              debugPrint(result.toString());
+              debugPrint(result.uid.toString());
             }
           },
         ),
